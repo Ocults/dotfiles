@@ -4,14 +4,14 @@
 <!-- BADGES -->
 <div align="center">
    <p></p>
-   <a href="https://github.com/janleigh/dotfiles/stargazers">
-      <img src="https://img.shields.io/github/stars/abissaldev/dotfiles?color=C9CBFF&labelColor=a9b1d6&style=for-the-badge">
+   <a href="https://github.com/abissaldev/dotfiles/stargazers">
+      <img src="https://img.shields.io/github/stars/abissaldev/dotfiles?color=C9CBFF&style=for-the-badge">
    </a>
-   <a href="https://github.com/janleigh/dotfiles/issues">
-      <img src="https://img.shields.io/github/issues/abissaldev/dotfiles?color=f7768e&labelColor=1C2325&style=for-the-badge">
+   <a href="https://github.com/abissaldev/dotfiles/issues">
+      <img src="https://img.shields.io/github/issues/abissaldev/dotfiles?color=f7768e&style=for-the-badge">
    </a>
    <a href="../LICENSE.md">
-      <img src="https://img.shields.io/github/license/abissaldev/dotfiles?color=73daca&labelColor=1C2325&style=for-the-badge">
+      <img src="https://img.shields.io/github/license/abissaldev/dotfiles?color=73daca&style=for-the-badge">
    </a>
    <br>
 </div>
@@ -47,7 +47,7 @@
    Clone Repository
 
    ```sh
-    git clone --recurse-submodules https://github.com/janleigh/dotfiles.git
+    git clone --recurse-submodules https://github.com/abissaldev/dotfiles.git
     cd dotfiles && git submodule update --remote --merge
    ```
    ## 📦 Installation
