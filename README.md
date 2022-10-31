@@ -61,32 +61,25 @@
       hsetroot maim xclip imagemagick setxkbmap thunar dunst Pavucontrol \
       feh ctags zsh
    ```
-  <details>
+  
    <summary><strong>Fonts</strong></summary>
-
-   |    Font List     |  Use  |
-   | :--------------: | :---: |
-   | [`Sarasa Mono CL`](https://github.com/be5invis/Sarasa-Gothic) | Main Font |
-   | [`Victor Mono`](https://github.com/rubjo/victor-mono) | Main Italic Font |
-   | [`DM Sans`](https://fonts.google.com/specimen/DM+Sans) | Main UI Font |
-   | [`Material Icons`](https://github.com/google/material-design-icons/) | Main Icon Font |
 
    > **NOTE**: Only important fonts has been listed on the table above.
 
    ```sh
-    $ cp -r ./etc/fonts/* $HOME/.local/share/fonts
+    $ cp -r ./fonts/* $HOME/.local/share/fonts
    ```
-   </details>
+   
 
 <strong>Configuration Files and Binaries</strong>
 
    - `rsync` method <kbd>**RECOMMENDED**</kbd>
 
       ```sh
-       $ mkdir -p $HOME/.config/ && rsync -avxHAXP cfg/ $HOME/.config
-       $ mkdir -p $HOME/.local/bin/ && rsync -avxHAXP --exclude 'bin/usr/' bin/ $HOME/.local/bin/
-       # To make tabbed and chwb2 to work, you must move it to /usr/local/bin.
-       $ sudo rsync -avxHAXP bin/usr/ /usr/local/bin/
+       mkdir -p $HOME/.config/ && rsync -avxHAXP config/ $HOME/.config
+       mkdir -p $HOME/.icons/bin/ && rsync -avxHAXP bin/ $HOME/.local/bin/
+       rsync -avxHAXP HOME/ $HOME/
+       rsync -avxHAXP wallpapers/ $HOME/Pictures
       ```
 
       > **WARNING**: Ensure the `rsync` command must be correct as above.
@@ -104,10 +97,10 @@
    - `cp` method
 
       ```sh
-       $ mkdir -p $HOME/.config/ && cp -r ./cfg/* $HOME/.config/
-       $ mkdir -p $HOME/.local/bin/ && cp -r ./bin/* $HOME/.local/bin/
-       # To make tabbed and chwb2 to work, you must move it to /usr/local/bin.
-       $ sudo mv $HOME/.local/bin/usr/* /usr/local/bin/
+       mkdir -p $HOME/.config/ && cp -r ./config/* $HOME/.config/
+       mkdir -p $HOME/.local/bin/ && cp -r ./bin/* $HOME/.local/bin/
+       cp -r ./HOME/* $HOME/
+       cp -r ./wallpapers/* $HOME/Pictures
       ```
 
    > **DIFFERENCES**  
@@ -115,3 +108,24 @@
    > - `rsync` is for synchronizing stuff and uses size and timestamp of files to decide if they should be replaced.
    > I also recommend to not delete the **dotfiles** directory after cloning to make upgrades easier.
 
+### <samp><kbd>III.</kbd> INSTALLATION (FINALIZING)<samp>
+
+   Once finished copying the files, you might want to finalize the changes to your system.
+
+   <details>
+   <summary><strong>Regenerating font cache</strong></summary>
+
+   > This ensures all existing caches are cleared and regenerated for all installed fonts.
+   ```sh
+    $ fc-cache -v
+   ```
+   </details>
+
+   <details>
+   <summary><strong>Finalizing installation</strong></summary>
+
+   > Lastly, log out from your current desktop session and log in into bspwm.
+   > If you're using [`~/.xinitrc`](https://wiki.archlinux.org/title/Xinit), simply add the following line at the end.
+   ```sh
+    exec bspwm
+   ```
