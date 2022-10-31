@@ -10,7 +10,7 @@
    <a href="https://github.com/abissaldev/dotfiles/issues">
       <img src="https://img.shields.io/github/issues/abissaldev/dotfiles?color=f7768e&style=for-the-badge">
    </a>
-   <a href="../LICENSE.md">
+   <a href="./LICENSE.md">
       <img src="https://img.shields.io/github/license/abissaldev/dotfiles?color=73daca&style=for-the-badge">
    </a>
    <br>
