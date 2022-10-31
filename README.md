@@ -5,13 +5,13 @@
 <div align="center">
    <p></p>
    <a href="https://github.com/abissaldev/dotfiles/stargazers">
-      <img src="https://img.shields.io/github/stars/abissaldev/dotfiles?color=C9CBFF&style=for-the-badge">
+      <img src="https://img.shields.io/github/stars/abissaldev/dotfiles?color=C9CBFf&style=for-the-badge">
    </a>
    <a href="https://github.com/abissaldev/dotfiles/issues">
-      <img src="https://img.shields.io/github/issues/abissaldev/dotfiles?color=f7768e&style=for-the-badge">
+      <img src="https://img.shields.io/github/issues/abissaldev/dotfiles?color=f7768E&style=for-the-badge">
    </a>
    <a href="./LICENSE">
-      <img src="https://img.shields.io/github/license/abissaldev/dotfiles?color=73daca&style=for-the-badge">
+      <img src="https://img.shields.io/github/license/abissaldev/dotfiles?color=73dacA&style=for-the-badge">
    </a>
    <br>
 </div>
