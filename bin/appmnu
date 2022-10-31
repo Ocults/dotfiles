@@ -1,0 +1,4 @@
+#!/bin/bash
+# ulauncher
+rofi -modi "drun" -show drun \
+-theme $HOME/.config/rofi/rofi/theme/config2.rasi

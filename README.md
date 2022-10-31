@@ -35,6 +35,7 @@
    - **Panel:** [polybar](https://github.com/polybar/polybar)
    - **Compositor:** [picom](https://github.com/yshui/picom)
    - **Editor:** [neovim](https://github.com/neovim/neovim)
+   - **Browser:** [qutebrowser](https://github.com/qutebrowser/qutebrowser)
    - **Notification Daemon:** [dunst](https://github.com/dunst-project/dunst)
    - **File Manager:** [thunar](https://github.com/xfce-mirror/thunar)
    - **Application Launcher:** [rofi](https://github.com/davatorium/rofi)
@@ -47,8 +48,8 @@
    Clone Repository
 
    ```sh
-    git clone --recurse-submodules https://github.com/abissaldev/dotfiles.git
-    cd dotfiles && git submodule update --remote --merge
+    git clone https://github.com/abissaldev/dotfiles.git
+    cd dotfiles
    ```
    ## 📦 Installation
    
@@ -56,6 +57,18 @@
 
    > Assuming your **AUR Helper** is [yay](https://github.com/Jguer/yay).
    ```sh
-    yay -S bspwm sxhkd rofi neovim-git kitty viewnior picom \
-      playerctl hsetroot maim jq xclip imagemagick dunst
+    yay -S bspwm sxhkd rofi polybar qutebrowser neovim-git kitty viewnior picom \
+      hsetroot maim xclip imagemagick setxkbmap thunar dunst Pavucontrol \
+      feh ctags zsh
    ```
+   ## Folder Structure
+
+    ├── ~/.local/bin              
+    │   ├── TOC.md              
+    │   ├── faq.md              
+    │   ├── misc.md             
+    │                             
+    └── ~/.config
+      ├── nvim
+         ├── TOC.md  
+
