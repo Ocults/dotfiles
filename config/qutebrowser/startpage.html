@@ -1,0 +1,115 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+dateOBJ =  new Date();
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+var n = dateOBJ.getMilliseconds()
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+if (i<10)
+{
+i="0" + i;
+}
+return i;
+}
+</script>
+</head>
+<body onload="startTime()">
+<div id="txt"></div>
+<p id="date"></p>
+<script>
+dayNum = dateOBJ.getDay();
+day = "";
+switch (dayNum) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;  
+    case 6:
+        day = "Saturday";
+        break;
+}
+
+y = dateOBJ.getFullYear();
+m = dateOBJ.getMonth() + 1;
+month = "";
+switch (m) {
+    case 1:
+        month = "Jan";
+        break;
+    case 2:
+        month = "Feb";
+        break;
+    case 3:
+        month = "Mar";
+        break;
+    case 4:
+        month = "Apr";
+        break;
+    case 5:
+        month = "May";
+        break;
+    case 6:
+        month = "Jun";
+        break;  
+    case 7:
+        month = "Jul";
+        break;
+    case 8:
+        month = "Aug";
+        break;
+    case 9:
+        month = "Sep";
+        break;
+    case 10:
+        month = "Oct";
+        break;
+    case 11:
+        month = "Nov";
+        break;
+    case 12:
+        month = "Dec";
+        break;
+}
+d = dateOBJ.getDate();
+document.getElementById("date").innerHTML = day + ", " + month + " " + d + ", " + y + " (" + m + "-" + d + "-" + y + ")";
+</script>
+<p id="date"></p>
+<!-- <a href="https://teams.microsoft.com" class="gc-link block1">Microsoft Teams</a>
+     <a href="https://jupitered.com" class="jp-link block1">Jupiter</a>
+     <a href="https://zoom.us/j/97579300743?pwd=NkozMDlXbFdySVJKRm13UGhSVUQzUT09#success" class="ls-link block1">Law School</a>
+     <a href="https://zoom.us/j/91765547398?pwd=MEI5Y3pnbW4xaDZSMlFBYUp1VytWZz09#success" class="ss-link block1">Social Studies/PE</a>
+     <a href="https://zoom.us/j/95021072394?pwd=QzE0M3FFRVFNY2dxa3RtTG5mRjVBZz09#success" class="lm-link block1">Law Math</a> -->
+<br>
+<br>
+<!-- <a href="https://mindspark.in" class="rsmsp-link block1">Mindspark</a> -->
+
+</body>
+
+</html>

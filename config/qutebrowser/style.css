@@ -1,0 +1,38 @@
+@import 'colors.css';
+
+body {
+    background-color: var(--color1);
+    font-family: 'JetBrainsMono NF', 'SauceCodePro NF';
+}
+
+#date {
+    color: #ccc;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    font-size: 25px;
+}
+
+#txt {
+    color: #ccc;
+    font-size: 100px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+}
+
+a {
+    color: #ddd;
+}
+
+.block1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    top: 50%;
+    left: 0%;
+    align-items: center;
+}

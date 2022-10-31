@@ -61,14 +61,57 @@
       hsetroot maim xclip imagemagick setxkbmap thunar dunst Pavucontrol \
       feh ctags zsh
    ```
-   ## Folder Structure
+  <details>
+   <summary><strong>Fonts</strong></summary>
 
-    ├── ~/.local/bin              
-    │   ├── TOC.md              
-    │   ├── faq.md              
-    │   ├── misc.md             
-    │                             
-    └── ~/.config
-      ├── nvim
-         ├── TOC.md  
+   |    Font List     |  Use  |
+   | :--------------: | :---: |
+   | [`Sarasa Mono CL`](https://github.com/be5invis/Sarasa-Gothic) | Main Font |
+   | [`Victor Mono`](https://github.com/rubjo/victor-mono) | Main Italic Font |
+   | [`DM Sans`](https://fonts.google.com/specimen/DM+Sans) | Main UI Font |
+   | [`Material Icons`](https://github.com/google/material-design-icons/) | Main Icon Font |
+
+   > **NOTE**: Only important fonts has been listed on the table above.
+
+   ```sh
+    $ cp -r ./etc/fonts/* $HOME/.local/share/fonts
+   ```
+   </details>
+
+<strong>Configuration Files and Binaries</strong>
+
+   - `rsync` method <kbd>**RECOMMENDED**</kbd>
+
+      ```sh
+       $ mkdir -p $HOME/.config/ && rsync -avxHAXP cfg/ $HOME/.config
+       $ mkdir -p $HOME/.local/bin/ && rsync -avxHAXP --exclude 'bin/usr/' bin/ $HOME/.local/bin/
+       # To make tabbed and chwb2 to work, you must move it to /usr/local/bin.
+       $ sudo rsync -avxHAXP bin/usr/ /usr/local/bin/
+      ```
+
+      > **WARNING**: Ensure the `rsync` command must be correct as above.
+      > 
+      > |   Options   |                      Function                         |
+      > | ----------- | ----------------------------------------------------- |
+      > | `-a`        | Archive mode                                          |
+      > | `-v`        | Verbose mode                                          |
+      > | `-x`        | Don't cross filesystem boundaries                     |
+      > | `-H`        | Preserve hard links                                   |
+      > | `-A`        | Preserve ACLs/permissions                             |
+      > | `-X`        | Preserve extended attributes                          |
+      > | `-P`        | Show progress during transfer                         |
+      > | `--exclude` | Exclude files matching `PATTERN`                      |
+   - `cp` method
+
+      ```sh
+       $ mkdir -p $HOME/.config/ && cp -r ./cfg/* $HOME/.config/
+       $ mkdir -p $HOME/.local/bin/ && cp -r ./bin/* $HOME/.local/bin/
+       # To make tabbed and chwb2 to work, you must move it to /usr/local/bin.
+       $ sudo mv $HOME/.local/bin/usr/* /usr/local/bin/
+      ```
+
+   > **DIFFERENCES**  
+   > - `cp` is for duplicating stuff and by default only ensures files have unique full path names.
+   > - `rsync` is for synchronizing stuff and uses size and timestamp of files to decide if they should be replaced.
+   > I also recommend to not delete the **dotfiles** directory after cloning to make upgrades easier.
 
