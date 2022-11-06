@@ -18,10 +18,13 @@
 <p/>
 <h2></h2>
 
-<!-- INFORMATION -->
-## :herb: <samp>INFORMATION</samp> <img alt="" align="right" src="https://badges.pufler.dev/visits/abissaldev/dotfiles?style=for-the-badge&color=A7D9B2&logoColor=white&labelColor=1C2325"/>
+<div align="center">
+<img src="./assets/showcase.png" alt="Rice Showcase"  width="">
+</div>
 
-   <img src="./assets/showcase.png" alt="Rice Showcase" align="right" width="400px">
+<!-- INFORMATION -->
+## :herb: <samp>INFORMATION</samp> <img alt="" align="center" src="https://badges.pufler.dev/visits/abissaldev/dotfiles?style=for-the-badge&color=A7D9B2&logoColor=white&labelColor=1C2325"/>
+
 
    Thanks for dropping by! This is my personal repository of my dotfiles.
 
